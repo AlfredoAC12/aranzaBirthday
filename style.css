@@ -116,22 +116,4 @@ p {
     }
 }
 
-@media (max-width: 767px) { /* Para pantallas de tablets y móviles */
-    h1 {
-        font-size: 2rem; /* Reduce el tamaño del título */
-    }
 
-    p {
-        font-size: 1.2rem; /* Ajusta el tamaño del texto */
-    }
-
-    .heart-image {
-        width: 100px; /* Reduce el tamaño de las imágenes */
-        margin: 2px; /* Reduce el margen entre imágenes */
-    }
-
-    .image-gallery {
-        flex-direction: column; /* Cambia a una disposición vertical */
-        gap: 10px; /* Ajusta el espacio entre imágenes */
-    }
-}
