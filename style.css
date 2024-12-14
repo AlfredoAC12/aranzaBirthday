@@ -1,0 +1,137 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('CEREZOS.webp'); /* Cambia 'fondo.jpg' por la ruta de tu imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita */
+    color: #ffffff;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+.container {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 2s ease-in-out;
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+}
+
+
+
+h1 {
+    font-family: papyrus,cursive ;
+    font-size: 3rem;
+    font-weight: bold;
+    color:#ff00bf;
+    margin-bottom: 1rem;
+    animation: bounce 1.5s infinite;
+}
+
+
+p {
+    font-family: papyrus,cursive ;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: rgb(17, 1, 1);
+    animation: slideIn 2s ease-in-out;
+}
+
+
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en filas múltiples */
+    justify-content: center; /* Centra las imágenes en la fila */
+    gap: 15px; /* Espaciado entre imágenes */
+}
+
+.heart-image {
+    width: 250px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    --_m: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
+    -webkit-mask-box-image: var(--_m);
+    mask-border: var(--_m);
+    clip-path: polygon(-41% 0,50% 91%, 141% 0);
+}
+
+.heart-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(255, 111, 97, 0.7);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+    }
+}
+
+@media (max-width: 767px) { /* Para pantallas de tablets y móviles */
+    h1 {
+        font-size: 2rem; /* Reduce el tamaño del título */
+    }
+
+    p {
+        font-size: 1.2rem; /* Ajusta el tamaño del texto */
+    }
+
+    .heart-image {
+        width: 100px; /* Reduce el tamaño de las imágenes */
+        margin: 2px; /* Reduce el margen entre imágenes */
+    }
+
+    .image-gallery {
+        flex-direction: column; /* Cambia a una disposición vertical */
+        gap: 10px; /* Ajusta el espacio entre imágenes */
+    }
+}
