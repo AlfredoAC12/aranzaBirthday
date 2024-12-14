@@ -20,7 +20,9 @@ body {
     align-items: center;
     height: 100vh;
     animation: fadeIn 2s ease-in-out;
-    
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
 }
 
 
@@ -114,3 +116,22 @@ p {
     }
 }
 
+@media (max-width: 767px) { /* Para pantallas de tablets y móviles */
+    h1 {
+        font-size: 2rem; /* Reduce el tamaño del título */
+    }
+
+    p {
+        font-size: 1.2rem; /* Ajusta el tamaño del texto */
+    }
+
+    .heart-image {
+        width: 100px; /* Reduce el tamaño de las imágenes */
+        margin: 2px; /* Reduce el margen entre imágenes */
+    }
+
+    .image-gallery {
+        flex-direction: column; /* Cambia a una disposición vertical */
+        gap: 10px; /* Ajusta el espacio entre imágenes */
+    }
+}
